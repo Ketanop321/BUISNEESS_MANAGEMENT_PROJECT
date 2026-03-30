@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: business-management-backend
+    runtime: java
+    plan: free
+    healthCheckPath: /home
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/businessproject.jar --spring.profiles.active=prod
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
