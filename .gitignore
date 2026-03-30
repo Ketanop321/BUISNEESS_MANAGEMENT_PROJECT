@@ -19,6 +19,7 @@ Thumbs.db
 .project
 .classpath
 .settings/
+.metadata/
 
 # Maven wrapper temp
 .mvn/wrapper/maven-wrapper.jar.backup
